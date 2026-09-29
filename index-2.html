@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q-Match Tickets — Your access to the game.</title>
+<meta name="description" content="Q-Match Tickets — Billets pour matchs de football et événements sportifs en Europe.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0d0f;color:#f4f4f4;line-height:1.6}.container{width:min(1080px,92%);margin:auto}
+header{padding:28px 0;border-bottom:1px solid #25292d}.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-size:25px;font-weight:800;letter-spacing:1px}.logo span{color:#65d68a}
+.lang button{background:transparent;border:1px solid #555;color:#ddd;padding:7px 11px;border-radius:7px;cursor:pointer;font-weight:700}.lang button.active{background:#65d68a;color:#08100b;border-color:#65d68a}
+.hero{padding:95px 0 85px;text-align:center}.badge{display:inline-block;border:1px solid #2e4938;color:#8be5a6;padding:7px 12px;border-radius:30px;font-size:13px;margin-bottom:22px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;margin:0 0 18px}h1 span{color:#65d68a}.subtitle{font-size:22px;color:#c5c9cc;margin:0 auto 34px;max-width:680px}
+.cta{display:inline-block;background:#65d68a;color:#08100b;text-decoration:none;padding:14px 24px;border-radius:8px;font-weight:800}
+section{padding:65px 0;border-top:1px solid #202428}h2{font-size:34px;margin:0 0 30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#121619;border:1px solid #262b2f;border-radius:13px;padding:26px}.number{font-size:14px;color:#65d68a;font-weight:800}.card h3{margin:8px 0;font-size:20px}.card p{color:#b9bec2;margin:0}.about{max-width:760px;color:#c5c9cc;font-size:18px}.contact{text-align:center}.contact a{color:#65d68a}
+footer{padding:30px 0;color:#777;text-align:center;border-top:1px solid #202428;font-size:14px}@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:65px 0}.nav{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><div class="logo">Q-MATCH <span>TICKETS</span></div><div class="lang"><button id="fr" class="active" onclick="setLang('fr')">FR</button><button id="en" onclick="setLang('en')">EN</button></div></div></header>
+<main>
+<section class="hero"><div class="container">
+<div class="badge" data-fr="BELGIQUE · FOOTBALL & ÉVÉNEMENTS SPORTIFS" data-en="BELGIUM · FOOTBALL & SPORTING EVENTS"></div>
+<h1 data-fr="Your access to the <span>game.</span>" data-en="Your access to the <span>game.</span>"></h1>
+<p class="subtitle" data-fr="Billets pour les plus grands matchs et événements sportifs en Europe, avec un service professionnel et personnalisé." data-en="Tickets for the biggest matches and sporting events across Europe, with a professional and personal service."></p>
+<a class="cta" href="mailto:qmatchtickets@gmail.com" data-fr="Nous contacter" data-en="Contact us"></a>
+</div></section>
+<section><div class="container"><h2 data-fr="Comment ça marche ?" data-en="How it works"></h2><div class="grid">
+<div class="card"><div class="number">01</div><h3 data-fr="Choisissez votre match" data-en="Choose your match"></h3><p data-fr="Dites-nous quel match ou événement sportif vous souhaitez voir." data-en="Tell us which match or sporting event you would like to attend."></p></div>
+<div class="card"><div class="number">02</div><h3 data-fr="Nous vérifions la disponibilité" data-en="We check availability"></h3><p data-fr="Nous vérifions les disponibilités et les conditions auprès de nos partenaires professionnels." data-en="We check availability and conditions with our professional partners."></p></div>
+<div class="card"><div class="number">03</div><h3 data-fr="Vous confirmez" data-en="You confirm"></h3><p data-fr="Après confirmation, nous organisons la réservation et la livraison de vos billets." data-en="Once confirmed, we arrange the booking and delivery of your tickets."></p></div>
+</div></div></section>
+<section><div class="container"><h2 data-fr="À propos de Q-Match Tickets" data-en="About Q-Match Tickets"></h2>
+<p class="about" data-fr="Q-Match Tickets est un service belge spécialisé dans la recherche et la fourniture de billets pour des matchs de football et des événements sportifs en Europe. Notre objectif : vous permettre d'accéder au match que vous voulez voir, avec un accompagnement simple, transparent et personnalisé." data-en="Q-Match Tickets is a Belgian service specialising in sourcing and providing tickets for football matches and sporting events across Europe. Our goal is simple: help you access the match you want to see, with a straightforward, transparent and personal service."></p></div></section>
+<section class="contact"><div class="container"><h2 data-fr="Une demande ?" data-en="Looking for a match?"></h2><p data-fr="Envoyez-nous votre demande et nous vérifierons les possibilités." data-en="Send us your request and we will check the available options."></p><a class="cta" href="mailto:qmatchtickets@gmail.com">qmatchtickets@gmail.com</a></div></section>
+</main>
+<footer><div class="container">© 2026 Q-Match Tickets — <span data-fr="Tous droits réservés." data-en="All rights reserved."></span></div></footer>
+<script>
+function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-fr]').forEach(el=>el.innerHTML=el.getAttribute('data-'+lang));document.getElementById('fr').classList.toggle('active',lang==='fr');document.getElementById('en').classList.toggle('active',lang==='en');localStorage.setItem('qmatch-lang',lang)}
+setLang(localStorage.getItem('qmatch-lang')||'fr');
+</script>
+</body></html>
